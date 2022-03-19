@@ -44,13 +44,11 @@ function useInputValueValidation(value, validations) {
 
 function useInputState(initialValue, validations) {
     const [value, setValue] = useState(initialValue);
-    const [isDirty, setIsDirty] = useState(false); //Устанавливался ли уже фокус на этом инпуте, или ещё нет
     const errors = useInputValueValidation(value, validations);
 
     const onChange = (e) => { setValue(e.target.value); };
-    const onBlur = (e) => { setIsDirty(true); };
 
-    return {value, onChange, onBlur, errors};
+    return {value, onChange, errors};
 }
 
 //Источник инфы про получение параметра из url: https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md#reading-url-params
@@ -165,7 +163,7 @@ function UserProfile({users, setCurrentSection}) {
         return (
             <div key={inputBlockTitle} className="uni-flex-column-block">
                 <span className='user-profile__input-description'>{inputBlockTitle}</span>
-                <input type="text" className={setVerifiableTextInputClass(inputState.errors)} value={inputState.value} disabled={readonly} onBlur={inputState.onBlur} onChange={inputState.onChange}/>
+                <input type="text" className={setVerifiableTextInputClass(inputState.errors)} value={inputState.value} disabled={readonly} onChange={inputState.onChange}/>
             </div>            
         );
     })
@@ -183,7 +181,7 @@ function UserProfile({users, setCurrentSection}) {
 
                     <div className="uni-flex-column-block">
                         <span className='user-profile__input-description'>Comment</span>
-                        <textarea name="comment" className={setVerifiableTextAreaClass(inputStates.commentInputState.errors)} value={inputStates.commentInputState.value} disabled={readonly} onBlur={inputStates.commentInputState.onBlur} onChange={inputStates.commentInputState.onChange}/>
+                        <textarea name="comment" className={setVerifiableTextAreaClass(inputStates.commentInputState.errors)} value={inputStates.commentInputState.value} disabled={readonly} onChange={inputStates.commentInputState.onChange}/>
                     </div>
                 </div>
                 <div className='uni-flex-row-block' style={{justifyContent:'space-between', alignItems:'center', width:'100%'}}>
