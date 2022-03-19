@@ -1,0 +1,14 @@
+@mixin font-roboto-400 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin font-roboto-700 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+$user-card-width: 420px;
+

@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+
+@import '../cross-modules-values.scss';
+
+//Выносим в переменные те величины, которые можно будет использовать, если будем делать адаптивную вёрстку по брейкпоинтам.
+$user-card-height: 73px;
+
+@mixin data-line-text-features {
+    @include font-roboto-400;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    box-sizing: border-box;
+    
+    background-color: #F3F3F3;
+    border-radius: 8px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    width: $user-card-width;
+    height: $user-card-height;
+}
+
+.user-card__data-line {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-card__data-description {
+    @include data-line-text-features;
+    color: #A3A3A3;
+    margin-right: 5px;
+}
+
+.user-card__data {
+    @include data-line-text-features;
+    color: #000000;
+}
+
+.user-card__bottom-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}

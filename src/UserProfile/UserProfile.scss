@@ -1,0 +1,97 @@
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@import '../cross-modules-values.scss';
+
+//Выносим в переменные те величины, которые можно будет использовать, если будем делать адаптивную вёрстку по брейкпоинтам.
+$user-profile-width:  438px;
+
+$textarea-width: 420px;
+$textarea-height: 55px;
+
+$text-input-width: 211px;
+$text-input-height: 22px;
+
+$inputs-block-height: 463px;
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+
+    width: $user-profile-width;
+}
+
+.user-profile__title {
+    @include font-roboto-700;
+
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.user-profile__inputs-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 1px solid #F3F3F3;
+    border-radius: 8px;
+
+    margin: 10px 0 10px 0;
+    padding: 20px 0 20px 12px;
+
+    height: $inputs-block-height;
+    width: 100%;
+}
+
+
+.user-profile__input {
+    @include font-roboto-400;  
+
+    background-color: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    border-radius: 5px;
+}
+
+.user-profile__input:disabled {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.user-profile__input_incorrect-value {
+    border: 1px solid #D91313;
+}
+
+.user-profile__input_text-input {   
+    font-size: 10px;
+    line-height: 12px;   
+
+    width: $text-input-width;
+    height: $text-input-height;
+}
+
+.user-profile__input_textarea { 
+    font-size: 10px;
+    line-height: 12px;   
+
+    resize:none;
+    
+    width: $textarea-width;
+    height: $textarea-height;
+}
+
+.user-profile__input-description {
+    @include font-roboto-400;  
+    font-size: 8px;
+    line-height: 9px;   
+}

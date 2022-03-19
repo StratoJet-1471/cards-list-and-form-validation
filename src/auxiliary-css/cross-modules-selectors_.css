@@ -1,0 +1,53 @@
+/*
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+*/
+
+/*
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Akronim&family=Roboto:wght@700&display=swap');
+}
+*/
+
+.uni-button {
+    background-color: #4B51EF;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 5px 15px 5px 15px;
+
+    cursor: pointer;
+}
+
+.uni-button_green {
+    background-color: #52CF4F;
+}
+
+.uni-button:hover {
+    background-color: #844bef;
+}
+
+.uni-button_green:hover {
+    background-color: #40b33e;
+}
+
+
+.uni-button:disabled {
+    background-color: #AFAFAF;
+
+    cursor: default;
+}

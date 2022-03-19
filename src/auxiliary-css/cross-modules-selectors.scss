@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@import './cross-modules-values.scss';
+
+.uni-link {
+    @include font-roboto-400;
+
+    font-size: 12px;
+    line-height: 14px;
+    color: #4B51EF;
+}
+
+.uni-flex-column-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.uni-flex-row-block {
+    display: flex;
+    flex-direction: row;
+}

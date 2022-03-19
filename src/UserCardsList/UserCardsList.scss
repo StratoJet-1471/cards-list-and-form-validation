@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@import '../cross-modules-values.scss';
+
+.fetch-indicator {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    padding: 30px 0 30px 0;
+    width: 100%;
+}
+
+.user-cards-list {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    width: $user-card-width;
+}
+
+.user-cards-list__title {
+    @include font-roboto-700;
+
+    box-sizing: border-box;
+
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.user-cards-list__text {
+    @include font-roboto-400;
+
+    box-sizing: border-box;
+    
+    font-size: 12px;
+    line-height: 14px;    
+}

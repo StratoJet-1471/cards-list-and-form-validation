@@ -1,0 +1,17 @@
+
+@import "./reset.css";
+
+body {
+    background-color: #E5E5E5;
+}
+
+div#root {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    box-sizing: border-box;
+    
+    margin-top: 87px;    
+    width: 100%;
+}

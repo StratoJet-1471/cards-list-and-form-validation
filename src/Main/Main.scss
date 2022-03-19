@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@import '../cross-modules-values.scss';
+
+//Выносим в переменные те величины, которые можно будет использовать, если будем делать адаптивную вёрстку по брейкпоинтам.
+$main__min-height: 500px;
+$main__left-sidebar-width: 152px;
+$main__content-block-width: 665px;
+$main__content-block-padding-top: 19px;
+$main__content-block-padding-bottom: 19px;
+$main__content-block-padding-left: 31px;
+
+.main {
+    display: flex;
+    flex-direction: row;
+
+    box-sizing: border-box;
+    min-height: $main__min-height;
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    background-color: #BDBDBD;
+
+    box-sizing: border-box;
+    padding-top: 35px;
+    padding-left: 21px;
+
+    width: $main__left-sidebar-width;
+}
+
+.left-sidebar__controls-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    box-sizing: border-box;
+    height: 82px;
+}
+
+.left-sidebar__controls-block-title {
+    @include font-roboto-400;
+
+    font-size: 12px;
+    line-height: 14px;    
+
+    color: #000000;
+}
+
+.content-block {
+    display: flex;
+    flex-direction: column;
+        
+    background-color: #FFFFFF;
+
+    box-sizing: border-box;
+    padding-top: $main__content-block-padding-top;
+    padding-bottom: $main__content-block-padding-bottom;
+    padding-left: $main__content-block-padding-left;
+
+    width: $main__content-block-width;
+}    
